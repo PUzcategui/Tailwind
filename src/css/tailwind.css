@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Card {
+  @apply w-48 h-64 shadow-md rounded-lg overflow-hidden shrink-0 snap-center transform transition-all hover:-translate-y-4 hover:shadow-xl;
+}
+.Card--cover {
+  @apply w-full h-3/5 rounded-t-lg bg-cover;
+}
+.Card--info {
+  @apply w-full h-2/5 rounded-b-lg px-4 py-2 shadow-md;
+}
+.Card:nth-last-of-type(even) .Card--info {
+  @apply bg-white  text-terciary dark:bg-slate-800 dark:text-slate-300;
+}
+.Card:nth-last-of-type(odd) .Card--info {
+  @apply bg-secondary  text-white dark:bg-slate-700;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.Card--title {
+  @apply text-4xl px-8 pt-8 pb-1 font-semibold text-white;
+}
+
+.nav-items {
+  @apply font-bold text-base text-primary dark:text-white;
+}
+
+.nav-icons {
+  @apply text-base text-primary dark:text-white;
+}
